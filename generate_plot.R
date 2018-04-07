@@ -75,3 +75,35 @@ lbls <- paste(lbls,"%",sep="") # ad % to labels
 
 barplot(tab,horiz=TRUE,las=1,xlab="Number of Tweets",names.arg=c("Joy","Fear","Anger","Suprise","Sadness"),col = c("green","blue","red"),main = "Ratio of Emotions/Sentiments",legend = rownames(tab),beside=TRUE)
 
+
+#Version with true labels for sentiment and Emotion model
+
+positiveV2 = c(312055,74474,133921,51094,218641)
+negativeV2 = c(126410,73393,179180,29984,379475)  
+
+tabv2 = rbind(positiveV2,negativeV2)
+
+colnames(tabv2) = c("joy","fear","anger","surprise","sadness")
+tabv2
+
+barplot(tabv2,horiz=TRUE,las=1,xlab="Number of Tweets",names.arg=c("Joy","Fear","Anger","Suprise","Sadness"),col = c("blue","red"),main = "Ratio of Emotions/Sentiments",legend = rownames(tabv2),beside=TRUE)
+
+#Version with TextBloB prediction for sentiment and Emotion model
+
+
+positiveBloB = c(251787,60325,101556,44175,233604)
+neutralBloB = c(146876,61592,120944,26772,201154)
+negativeBloB = c(39802,25950,90601,10131,163358)  
+
+tabv2 = rbind(positiveBloB,neutralBloB,negativeBloB)
+
+colnames(tabv2) = c("joy","fear","anger","surprise","sadness")
+tabv2
+
+barplot(tabv2,horiz=TRUE,las=1,xlab="Number of Tweets",names.arg=c("Joy","Fear","Anger","Suprise","Sadness"),col = c("blue","white","red"),main = "Ratio of Emotions/Sentiments",legend = rownames(tabv2),beside=TRUE)
+
+
+
+
+
+
